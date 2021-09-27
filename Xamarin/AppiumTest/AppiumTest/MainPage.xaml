@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<appiumTest:BasePage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:appiumTest="clr-namespace:AppiumTest;assembly=AppiumTest"
+    x:Class="AppiumTest.MainPage">
+    <StackLayout
+        VerticalOptions="Center"
+        HorizontalOptions="Center">
+        <!-- Place new controls here -->
+        <Label
+            Text="Automated UI test"
+            HorizontalOptions="Center" />
+        <Button
+            AutomationId="NavButton"
+            Text="Navigate to the second page"
+            WidthRequest="200"
+            HeightRequest="50"
+            HorizontalOptions="Center"
+            Clicked="Button_OnClicked" />
+    </StackLayout>
+</appiumTest:BasePage>

@@ -10,12 +10,12 @@ class TestAppiumiOS(TestAppiumBase):
         self.dc.clear()
         local_env = os.getenv('LOCAL_DEV_ENV')
         if local_env == '1':
-            self.dc['app'] = "/Users/jaewoosim/Documents/MobileApps/XAM/AppiumAWSDeviceFarm/Python/workspace/AppiumTest.ipa"
+            self.dc['app'] = "{PATH_OF_IPA_FILE}"
             self.dc['automationName'] = 'XCUITest'
             self.dc['platformName'] = 'iOS'
             self.dc['platformVersion'] = '14.7.1'
             self.dc['deviceName'] = "iPhone XR"
-            self.dc['udid'] = '00008020-001824513EF8002E'
+            self.dc['udid'] = '{UDID_OF_YOUR_DEVICE}'
             self.dc['bundleId'] = 'com.crowdco.greeta'
 
         self.driver = webdriver.Remote("http://localhost:4723/wd/hub", self.dc)

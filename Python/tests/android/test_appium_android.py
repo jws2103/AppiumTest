@@ -10,9 +10,9 @@ class TestAppiumAndroid(TestAppiumBase):
         self.dc.clear()
         local_env = os.getenv('LOCAL_DEV_ENV')
         if local_env == '1':
-            self.dc['app'] = "/Users/jaewoosim/Documents/MobileApps/XAM/AppiumAWSDeviceFarm/Python/workspace/AppiumTest.apk"
+            self.dc['app'] = "{PATH_OF_APK_FILE}"
             self.dc['platformName'] = 'Android'
-            self.dc['deviceName'] = "emulator-5554 (11)"
+            self.dc['deviceName'] = "{NAME_OF_ANDROID_EMULATOR}"
 
         self.driver = webdriver.Remote("http://localhost:4723/wd/hub", self.dc)
 
